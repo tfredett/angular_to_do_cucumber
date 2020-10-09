@@ -46,7 +46,19 @@ Then('my todo item is marked completed') do
   expect(todo_list_item['class']).to eq('completed')
 end
 
+When('I click the delete button on my todo item') do
+  todo_list_item = @browser.find('label', text: INPUT_TEST_TEXT).ancestor('div')
+  todo_list_item.hover
+  delete_button = todo_list_item.find(DELETE_BUTTON_SELECTOR, visible: false)
+  delete_button.hover.click
+end
+
+Then('my todo item is removed from the list') do
+  expect(@browser).to have_no_css('li')
+end
+
+
 def clear_todo_list!
   @browser.visit(MAIN_URL) unless @browser.current_url == MAIN_URL
-  @browser.all(DELETE_BUTTON_SELECTOR).each(&:click)
+  @browser.all(DELETE_BUTTON_SELECTOR, visible: false).each(&:click)
 end
