@@ -2,6 +2,7 @@ require 'capybara/cucumber'
 require 'webdrivers'
 
 Capybara.default_driver = :firefox
+Capybara.default_max_wait_time = 5
 
 Capybara.register_driver :headless_firefox do |app|
   Capybara::Selenium::Driver.load_selenium
