@@ -1,5 +1,3 @@
-require 'pry'
-
 MAIN_URL = 'http://todomvc.com/examples/angular2/'.freeze
 INPUT_TEST_TEXT = 'Get milk at the store'.freeze
 
