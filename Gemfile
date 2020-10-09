@@ -3,5 +3,9 @@ source 'https://rubygems.org' do
   gem 'cucumber'
   gem 'capybara'
   gem 'webdrivers'
-  gem 'rubocop'
+
+  group :development do
+    gem 'rubocop'
+    gem 'pry'
+  end
 end
