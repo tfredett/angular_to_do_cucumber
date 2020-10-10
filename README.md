@@ -36,11 +36,10 @@ This is where the glue code connects the Gherkin found in the feature files, to 
 This is where we describe the expected types of components on a page, as well as the type of actions we can perform on that page. Utilizing page objects, help reduces code duplication as well as help keep intact the Single Responsibility Principle. Since the page object would be the singular source of truth of what that page represents and what can be done on it.
 
 ### Helper Files
-These are where various helper classes and methods would go. For now, it contains within the `support` folder, just the `env.rb` file. Which is automatically loaded and run before `Capybara` runs. This is also where files can be organized and stored that has various helper methods. These can be things such as modified finders, or more specific wait methods that are not built into `Selenium` or `Capybara`, or are insufficent from either.
+These are where various helper classes and methods would go. within the `support` folder, it contains the `env.rb` file, which is automatically loaded and run before `Capybara` runs. As well as the directory `utils`, which contains `wait_utils.rb` This is also where files can be organized and stored that has various helper methods. These can be things such as modified finders, or more specific wait methods that are not built into `Selenium` or `Capybara`, or are insufficent from either.
 
 
 ### Known Places for Improvement
-* Currently there is a helper fluent wait method in `env.rb`. This should be moved into its own `wait_utils.rb` module for organization purposes.
 * The `features` folder should have subdirectories created for the various features that are there. In this case, one would be made, simply for the todo list page.
 * Due to the limited scope in this area, this one is less crucial. As the project would grow though, doing a full directory glob require may be helpful to avoid the massive amounts of `require` and `require_relative` that would inevitibly begin to happen. An example of what I mean can be found [here](https://stackoverflow.com/a/4528011).
 
