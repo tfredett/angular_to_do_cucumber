@@ -42,5 +42,4 @@ These are where various helper classes and methods would go. within the `support
 ### Known Places for Improvement
 * The `features` folder should have subdirectories created for the various features that are there. In this case, one would be made, simply for the todo list page.
 * Due to the limited scope in this area, this one is less crucial. As the project would grow though, doing a full directory glob require may be helpful to avoid the massive amounts of `require` and `require_relative` that would inevitibly begin to happen. An example of what I mean can be found [here](https://stackoverflow.com/a/4528011).
-
-
+* A spec helper could be added, and used to enable RSpec to enable test shuffling, to help ensure order independance.
