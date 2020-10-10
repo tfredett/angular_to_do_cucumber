@@ -1,5 +1,7 @@
+require_relative '../support/utils/wait_utils'
 class TodoPage < Struct.new(:title)
   include Capybara::DSL
+  include WaitUtils
 
   MAIN_URL = 'http://todomvc.com/examples/angular2/'.freeze
   INPUT_SELECTOR = '.new-todo'.freeze
