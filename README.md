@@ -42,4 +42,6 @@ These are where various helper classes and methods would go. For now, it contain
 ### Known Places for Improvement
 * Currently there is a helper fluent wait method in `env.rb`. This should be moved into its own `wait_utils.rb` module for organization purposes.
 * The `features` folder should have subdirectories created for the various features that are there. In this case, one would be made, simply for the todo list page.
+* Due to the limited scope in this area, this one is less crucial. As the project would grow though, doing a full directory glob require may be helpful to avoid the massive amounts of `require` and `require_relative` that would inevitibly begin to happen. An example of what I mean can be found [here](https://stackoverflow.com/a/4528011).
+
 
