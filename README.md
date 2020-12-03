@@ -1,9 +1,11 @@
 # AngularToDoCucumber
-This is the UI automation coding exercise for SignalPath, to demonstrate my ability to do the following.
+This is the UI automation coding example, to demonstrate my ability to do the following.
 
 * Start up a UI automation framework
 * Utilize said framework to write working automation
 * Show coding style and structure
+
+This utilizes the online test angular service found [here](http://todomvc.com/examples/angular2/)
 
 ## Prerequisites
 * Install [rbenv](https://github.com/rbenv/rbenv) with [ruby-build](https://github.com/rbenv/ruby-build)
