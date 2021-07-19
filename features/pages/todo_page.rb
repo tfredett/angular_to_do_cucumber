@@ -13,14 +13,14 @@ class TodoPage < Struct.new(:title)
     input_box = find(INPUT_SELECTOR)
     # The following send keys is being used due to the Capybara fill-in method not working
     # My suspicion is because of the Angular interfering with it in some fashion.
-    input_box.native.send_keys(INPUT_TEST_TEXT)
+    input_box.native.send_keys(text)
     # Because of us having to use the send keys above.
     # Capybara is not smart enough to wait for the send keys action to actually finish
     # As such, add a fluent wait to wait until the actual action completes
-    wait_until_value(input_box, INPUT_TEST_TEXT)
+    wait_until_value(input_box, text)
     input_box.native.send_keys(:return)
   end
-  
+
   def goto_page
     visit(MAIN_URL)
   end
